@@ -1,0 +1,20 @@
+# Environnements virtuels
+venv/
+env/
+virtualenv/
+
+# Fichiers Python compilés
+*.pyc
+__pycache__/
+
+# Fichiers de base de données SQLite
+db.sqlite3
+
+# Fichiers de configuration locaux
+.env
+
+# Fichiers statiques collectés
+/static/
+
+# JetBrains IDEs
+.idea/
