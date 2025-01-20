@@ -27,8 +27,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_COOKIE_SECURE = False
-
 
 # Application definition
 
