@@ -46,7 +46,7 @@ def process_file_and_train_model(uploaded_file):
         return f1_score(y_test, model.predict(x_test))
 
     study = optuna.create_study(direction='maximize')
-    study.optimize(objective, n_trials=100)
+    study.optimize(objective, n_trials=2)
 
     best_params = study.best_params
     optimized_model = DecisionTreeClassifier(**best_params, random_state=42)
