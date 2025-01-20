@@ -8,7 +8,7 @@ from sklearn.metrics import precision_score, recall_score, f1_score, confusion_m
 import optuna
 
 # Fonction d'évaluation des modèles
-@csrf_exempt
+
 def evaluate_model(model, x_test, y_test):
     y_pred = model.predict(x_test)
     return {
@@ -19,7 +19,6 @@ def evaluate_model(model, x_test, y_test):
     }
 
 # Fonction pour traiter le fichier CSV et entraîner un modèle
-@csrf_exempt
 def process_file_and_train_model(uploaded_file):
     try:
         dataset = pd.read_csv(uploaded_file)
@@ -60,7 +59,6 @@ def process_file_and_train_model(uploaded_file):
     return baseline_results, optimized_results, best_params
 
 # Vue principale
-@csrf_exempt
 def mavue(request):
     baseline_results = None
     optimized_results = None
